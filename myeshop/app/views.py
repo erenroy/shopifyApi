@@ -237,12 +237,12 @@ def laptop(request , data=None):
         laptops = Product.objects.filter(category='L').filter(discounted_price__gt=10000)
     return render(request, 'app/laptop.html', {'laptops':laptops })
 
-def Pricebarg(request , prod):
-    a = 14
-    product = Product.objects.get(pk=prod)
-    products = product.discounted_price
-    print(products)
-    return render(request, 'app/pricebarg.html',{'product':product,'a':a} )
+# def Pricebarg(request , prod):
+#     a = 14
+#     product = Product.objects.get(pk=prod)
+#     products = product.discounted_price
+#     print(products)
+#     return render(request, 'app/pricebarg.html',{'product':product,'a':a} )
     
 @login_required
 def blog(request):
